@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T22:28:37.740361Z",
+  "title": "Design System: Dárquia Moreira, Psicóloga Clínica",
+  "extensions": {
+    "colorMeta": {
+      "graphite": {
+        "role": "primary",
+        "displayName": "Graphite",
+        "canonical": "#1F2123",
+        "tonalRamp": [
+          "#1F2123",
+          "#3D3F41",
+          "#5B5D5E",
+          "#797B7C",
+          "#979899",
+          "#B5B6B7",
+          "#D3D4D4",
+          "#F1F2F2"
+        ]
+      },
+      "matte-gold": {
+        "role": "secondary",
+        "displayName": "Matte Gold",
+        "canonical": "#A88646",
+        "tonalRamp": [
+          "#4A3A1A",
+          "#625335",
+          "#7A6C51",
+          "#92856C",
+          "#AA9F87",
+          "#C2B8A2",
+          "#DAD1BE",
+          "#F2EAD9"
+        ]
+      },
+      "gold-ink": {
+        "role": "secondary",
+        "displayName": "Gold Ink",
+        "canonical": "#7A5F2B",
+        "tonalRamp": [
+          "#3A2D12",
+          "#53462C",
+          "#6C6045",
+          "#85795F",
+          "#9F9379",
+          "#B8AC93",
+          "#D1C6AC",
+          "#EADFC6"
+        ]
+      },
+      "pearl": {
+        "role": "neutral",
+        "displayName": "Pearl",
+        "canonical": "#F6F6F4",
+        "tonalRamp": [
+          "#3A3B3A",
+          "#565655",
+          "#717271",
+          "#8D8D8C",
+          "#A8A9A8",
+          "#C4C4C3",
+          "#DFE0DF",
+          "#FBFBFA"
+        ]
+      },
+      "gold-tint": {
+        "role": "neutral",
+        "displayName": "Gold Tint",
+        "canonical": "#EEE7D6",
+        "tonalRamp": [
+          "#8C7A4E",
+          "#9B8B64",
+          "#AB9D7A",
+          "#BAAE90",
+          "#C9BFA7",
+          "#D8D0BD",
+          "#E8E2D3",
+          "#F7F3E9"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline, two lines on desktop."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Tile and plan headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs, about 62ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons."
+      }
+    },
+    "shadows": [
+      {
+        "name": "chip",
+        "value": "0 18px 40px -22px rgb(31 33 35 / .5)",
+        "purpose": "Name chip over the hero photo."
+      },
+      {
+        "name": "button-hover",
+        "value": "0 10px 24px -12px rgb(31 33 35 / .45)",
+        "purpose": "Primary button on hover only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "All entrances, hovers and the FAQ caret."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity + translateY(18px) over .8s",
+        "purpose": "Scroll reveal; tiles settle with scale .97, quotes only fade."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The WhatsApp call to action.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Agendar sessão</a>",
+      "css": ".ds-btn{font-family:Figtree,system-ui,sans-serif;font-weight:600;font-size:17px;line-height:1.2;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:13px 26px;border:0;border-radius:999px;cursor:pointer;background:#1F2123;color:#F6F6F4;transition:background-color .25s,color .25s,transform .25s;text-decoration:none}.ds-btn:hover{background:#A88646;color:#1F2123;transform:translateY(-2px)}.ds-btn:focus-visible{outline:3px solid #7A5F2B;outline-offset:3px}.ds-btn:active{transform:scale(.98)}"
+    },
+    {
+      "name": "Button on Band",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Inverted button on the graphite contact band.",
+      "html": "<div style=\"background:#1F2123;padding:20px\"><a class=\"ds-btn-band\" href=\"#\">Agendar sessão</a></div>",
+      "css": ".ds-btn-band{font-family:Figtree,system-ui,sans-serif;font-weight:600;font-size:17px;display:inline-flex;align-items:center;min-height:52px;padding:13px 26px;border-radius:999px;background:#F6F6F4;color:#1F2123;text-decoration:none;transition:background-color .25s}.ds-btn-band:hover{background:#C9A765}"
+    },
+    {
+      "name": "Treatment Tile",
+      "kind": "card",
+      "refersTo": "tile",
+      "description": "Resting tile in the bento of treatments.",
+      "html": "<article class=\"ds-tile\"><h3>Ansiedade e estresse</h3><p>Reduzir os sintomas e criar formas saudáveis de lidar com o dia a dia.</p></article>",
+      "css": ".ds-tile{font-family:Figtree,system-ui,sans-serif;background:#ECECE8;color:#1F2123;border-radius:16px;padding:36px;max-width:420px}.ds-tile h3{font-family:Outfit,system-ui,sans-serif;font-weight:600;font-size:22px;margin:0 0 8px}.ds-tile p{margin:0;color:#4E5356;line-height:1.65}"
+    },
+    {
+      "name": "Graphite Tile",
+      "kind": "card",
+      "refersTo": "tile-ink",
+      "description": "The single dark tile in a section.",
+      "html": "<article class=\"ds-tile-ink\"><h3>Acompanhamento na cirurgia bariátrica</h3><p>Suporte emocional antes e depois da cirurgia.</p></article>",
+      "css": ".ds-tile-ink{font-family:Figtree,system-ui,sans-serif;background:#1F2123;color:#F6F6F4;border-radius:16px;padding:36px;max-width:420px}.ds-tile-ink h3{font-family:Outfit,system-ui,sans-serif;font-weight:600;font-size:22px;margin:0 0 8px;color:#F6F6F4}.ds-tile-ink p{margin:0;color:#C4C7C8;line-height:1.65}"
+    },
+    {
+      "name": "Technique Chip",
+      "kind": "chip",
+      "refersTo": "tile",
+      "description": "Outlined informational pill.",
+      "html": "<span class=\"ds-chip\">Reestruturação cognitiva</span>",
+      "css": ".ds-chip{font-family:Figtree,system-ui,sans-serif;font-weight:500;font-size:15px;display:inline-flex;align-items:center;min-height:40px;padding:6px 16px;border-radius:999px;color:#1F2123;box-shadow:inset 0 0 0 1px #D6D6D1}"
+    },
+    {
+      "name": "Patient Quote",
+      "kind": "card",
+      "refersTo": "tile",
+      "description": "Review card with Google attribution.",
+      "html": "<figure class=\"ds-quote\"><blockquote>“Me senti ouvida e acolhida desde a primeira sessão.”</blockquote><figcaption><b>Thaissa Sobrinho</b><br><small>Avaliação no Google</small></figcaption></figure>",
+      "css": ".ds-quote{margin:0;font-family:Figtree,system-ui,sans-serif;background:#FBFBFA;color:#1F2123;border-radius:16px;padding:32px;box-shadow:inset 0 0 0 1px #D6D6D1;max-width:380px}.ds-quote blockquote{margin:0 0 16px;line-height:1.6}.ds-quote small{color:#4E5356}"
+    },
+    {
+      "name": "FAQ Item",
+      "kind": "custom",
+      "refersTo": "tile",
+      "description": "Native disclosure styled as a tile.",
+      "html": "<details class=\"ds-faq\" open><summary>Qual a duração da sessão?</summary><p>Em média, 50 minutos.</p></details>",
+      "css": ".ds-faq{font-family:Figtree,system-ui,sans-serif;background:#FBFBFA;border-radius:16px;box-shadow:inset 0 0 0 1px #D6D6D1;max-width:420px}.ds-faq summary{font-family:Outfit,system-ui,sans-serif;font-weight:600;font-size:19px;padding:16px 24px;min-height:60px;cursor:pointer;list-style:none;display:flex;align-items:center}.ds-faq summary:focus-visible{outline:3px solid #7A5F2B;outline-offset:3px;border-radius:16px}.ds-faq p{margin:0;padding:0 24px 22px;color:#4E5356}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Consulting Room",
+    "overview": "The page behaves like the room it advertises: pearl walls, graphite furniture, one small piece of gold, and her face as the warmest thing in view. Nothing shouts. Trust comes from space, from patients' own words in large type, and from a single obvious action (WhatsApp) repeated calmly.",
+    "keyCharacteristics": [
+      "Cool pearl ground, graphite ink, one matte-gold accent used for graphics, filets and hover fills.",
+      "Sans-only type: Outfit for voice, Figtree for reading.",
+      "16px tiles and pill buttons; no shadows at rest.",
+      "Light by default, dark mode automatic with the same token names."
+    ],
+    "rules": [
+      {
+        "name": "The One Gold Rule",
+        "body": "Gold is the only accent. It appears as graphic marks, filets and hover fills, and the text-safe Gold Ink handles any gold that must be read.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pearl Not Cream Rule",
+        "body": "The ground stays cool and near-white. Warmth is allowed in one tinted tile per section, never in the page field.",
+        "section": "colors"
+      },
+      {
+        "name": "The Same Family Rule",
+        "body": "Emphasis is weight or size inside Outfit or Figtree; no mixed-family flourishes.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Eyebrow Rule",
+        "body": "Headings stand alone, without small labels above them.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat At Rest Rule",
+        "body": "Surfaces carry no shadow until a state asks for one.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do send every call to action to WhatsApp, with a message that matches the section.",
+      "Do keep patients' reviews verbatim, with their Google attribution.",
+      "Do use Gold Ink (#7A5F2B) whenever gold text is needed on a light ground.",
+      "Do keep one gold-tinted tile per section at most."
+    ],
+    "donts": [
+      "Don't publish session prices, opening hours or statistics that are not in her own sources.",
+      "Don't introduce a second accent, a serif face, or gradient text.",
+      "Don't put eyebrow labels above headings or number the sections.",
+      "Don't use shadows at rest or hard offset shadows."
+    ]
+  }
+}

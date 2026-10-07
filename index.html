@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Dárquia Moreira | Psicóloga Clínica em Mauá e Mooca (TCC)</title>
+<meta name="description" content="Psicóloga clínica em Mauá e na Mooca (SP), especialista em Terapia Cognitivo-Comportamental. Atendimento online e presencial. Agende pelo WhatsApp.">
+<meta name="theme-color" content="#F6F6F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141617" media="(prefers-color-scheme: dark)">
+<!-- EDITÁVEL: troque pela URL final do site quando o domínio estiver definido (og:url, og:image e canonical) -->
+<link rel="canonical" href="https://gustavoteodoro10.github.io/PsicoDarquiaMoreira/">
+
+<!-- Open Graph (preview no WhatsApp e Instagram) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Dárquia Moreira, Psicóloga Clínica">
+<meta property="og:title" content="Dárquia Moreira | Psicóloga Clínica em Mauá e Mooca">
+<meta property="og:description" content="Terapia Cognitivo-Comportamental online e presencial. Nota 5,0 no Google. Agende pelo WhatsApp.">
+<meta property="og:url" content="https://gustavoteodoro10.github.io/PsicoDarquiaMoreira/">
+<meta property="og:image" content="https://gustavoteodoro10.github.io/PsicoDarquiaMoreira/assets/img/og-darquia.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dárquia Moreira, psicóloga clínica, sorrindo sentada em um sofá claro">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/darquia-hero.webp" imagesrcset="assets/img/darquia-hero-640.webp 640w, assets/img/darquia-hero.webp 960w" imagesizes="(min-width: 1024px) 500px, 90vw" fetchpriority="high">
+
+<!-- Analytics: GoatCounter (sem cookies, sem banner). Troque apenas o endereço em data-goatcounter se necessário. -->
+<script data-goatcounter="https://teocode.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+<script>document.documentElement.classList.add('js');</script>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'media',
+    theme: { extend: { fontFamily: { display: ['Outfit', 'system-ui', 'sans-serif'], body: ['Figtree', 'system-ui', 'sans-serif'] } } }
+  };
+</script>
+
+<style>
+/* ===== Tokens: um tema, claro por padrão e escuro automático (prefers-color-scheme) ===== */
+:root{
+  --bg:#F6F6F4; --bg-2:#ECECE8; --tint:#EEE7D6; --surface:#FBFBFA;
+  --ink:#1F2123; --ink-2:#4E5356; --line:#D6D6D1;
+  --accent:#A88646;          /* dourado fosco: só gráficos, filetes e hover (nunca texto sobre claro) */
+  --accent-text:#7A5F2B;     /* versão do dourado segura para texto sobre claro */
+  --btn-bg:#1F2123; --btn-ink:#F6F6F4; --btn-hover-bg:#A88646; --btn-hover-ink:#1F2123;
+  --band-bg:#1F2123; --band-ink:#F6F6F4; --band-ink-2:#C4C7C8; --band-accent:#C9A765;
+  --focus:#7A5F2B;
+  --radius:16px;
+  --ease:cubic-bezier(.23,1,.32,1);          /* ease-out forte para toda interação de UI */
+  --ease-in-out:cubic-bezier(.77,0,.175,1);   /* movimento que acontece na tela */
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#141617; --bg-2:#1D2021; --tint:#2A2519; --surface:#1A1D1E;
+    --ink:#ECECE9; --ink-2:#B6B9BA; --line:#2F3436;
+    --accent:#C9A765; --accent-text:#D9BC82;
+    --btn-bg:#ECECE9; --btn-ink:#141617; --btn-hover-bg:#C9A765; --btn-hover-ink:#141617;
+    --band-bg:#232728; --band-ink:#F1F1EE; --band-ink-2:#BFC2C3; --band-accent:#D9BC82;
+    --focus:#D9BC82;
+  }
+}
+
+html{interpolate-size:allow-keywords;scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:'Figtree',system-ui,sans-serif;font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{font-family:'Outfit',system-ui,sans-serif;color:var(--ink);text-wrap:balance}
+p{text-wrap:pretty}
+/* Superfícies do navegador temadas pela paleta */
+::selection{background:var(--accent);color:var(--btn-hover-ink)}
+:root{caret-color:var(--accent-text);accent-color:var(--accent)}
+*{scrollbar-color:var(--accent) var(--bg-2);scrollbar-width:thin}
+a{text-underline-offset:.25em;text-decoration-thickness:1px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+
+.skip{position:absolute;left:1rem;top:-4rem;background:var(--btn-bg);color:var(--btn-ink);padding:.75rem 1.25rem;border-radius:999px;z-index:70;transition:top .2s var(--ease)}
+.skip:focus{top:1rem}
+
+/* ===== Tipografia ===== */
+.h1{font-weight:600;font-size:clamp(2.5rem,.8rem + 3.2vw,3.625rem);line-height:1.05;letter-spacing:-.03em}
+.h2{font-weight:600;font-size:clamp(2rem,1.2rem + 2.8vw,3.25rem);line-height:1.1;letter-spacing:-.025em}
+.h3{font-weight:600;font-size:1.375rem;line-height:1.25;letter-spacing:-.01em}
+.lead{font-size:clamp(1.125rem,1rem + .5vw,1.3125rem);line-height:1.6;color:var(--ink-2);max-width:40ch}
+.muted{color:var(--ink-2)}
+.measure{max-width:62ch}
+
+/* ===== Ícones (sprite Phosphor inline) ===== */
+.ic{width:1.25em;height:1.25em;fill:currentColor;flex:none}
+
+/* ===== Botões: pill, contraste AA ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;padding:.8rem 1.6rem;border-radius:999px;font-weight:600;font-size:1.0625rem;line-height:1.2;white-space:nowrap;text-decoration:none;
+  background:var(--btn-bg);color:var(--btn-ink);transition:background-color 160ms ease,color 160ms ease,transform 160ms var(--ease),box-shadow 200ms ease}
+.btn:active{transform:scale(.97)}
+.btn .ic{transition:transform 200ms var(--ease)}
+.btn-on-band{background:var(--band-ink);color:var(--band-bg)}
+.btn-sm{min-height:2.75rem;padding:.55rem 1.25rem;font-size:1rem}
+.link-quiet{display:inline-flex;align-items:center;gap:.4rem;font-weight:500;color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:.3em;text-decoration-thickness:2px;min-height:2.75rem;transition:color 150ms ease,transform 160ms var(--ease)}
+.link-quiet:active{transform:scale(.97)}
+.link-quiet .ic{transition:transform 200ms var(--ease)}
+
+/* ===== Navegação ===== */
+.nav{position:sticky;top:0;z-index:50;background:var(--bg);transition:box-shadow 200ms ease}
+.nav.is-stuck{box-shadow:0 1px 0 var(--line)}
+.nav-link{display:inline-flex;align-items:center;min-height:2.75rem;padding:0 .25rem;font-weight:500;font-size:1rem;color:var(--ink-2);text-decoration:none;position:relative;transition:color 150ms ease}
+.nav-link::after{content:"";position:absolute;left:.25rem;right:.25rem;bottom:.35rem;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 220ms var(--ease)}
+.wordmark{display:flex;flex-direction:column;line-height:1.3;text-decoration:none;color:var(--ink)}
+.wordmark b{font-family:'Outfit',sans-serif;font-weight:600;font-size:1.375rem;letter-spacing:-.02em;line-height:1.2}
+.wordmark span{font-size:.8125rem;font-weight:500;color:var(--ink-2);margin-top:.15rem;letter-spacing:.02em;line-height:1.35}
+.menu-btn{display:inline-flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:999px;background:transparent;color:var(--ink);transition:background-color 150ms ease,transform 160ms var(--ease)}
+.menu-btn:active{transform:scale(.94)}
+.menu-panel{border-top:1px solid var(--line);background:var(--bg);padding-top:.75rem;transition:opacity 180ms var(--ease),transform 180ms var(--ease)}
+@starting-style{.menu-panel{opacity:0;transform:translateY(-8px)}}
+.menu-panel a.m-link{display:flex;align-items:center;min-height:3.25rem;font-family:'Outfit',sans-serif;font-weight:400;font-size:1.5rem;color:var(--ink);text-decoration:none}
+
+/* ===== Hero ===== */
+.hero-photo{position:relative;aspect-ratio:4/5;width:100%;max-width:30rem;justify-self:end}
+.hero-photo::before{content:"";position:absolute;inset:1.25rem -1.25rem -1.25rem 1.25rem;border-radius:var(--radius);background:var(--tint);z-index:0}
+.hero-photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:50% 12%;border-radius:var(--radius);background:var(--bg-2)}
+.name-chip{position:absolute;z-index:2;left:-1.25rem;bottom:2rem;background:var(--surface);color:var(--ink);padding:.9rem 1.25rem;border-radius:var(--radius);box-shadow:0 18px 40px -22px rgb(31 33 35 / .5);display:flex;flex-direction:column;gap:.15rem}
+.name-chip b{font-family:'Outfit',sans-serif;font-weight:600;font-size:1.0625rem;line-height:1.2}
+.name-chip span{font-size:.9375rem;color:var(--ink-2);line-height:1.3}
+
+/* ===== Tiles (bento e planos) ===== */
+.tile{border-radius:var(--radius);padding:clamp(1.5rem,1rem + 1.6vw,2.25rem);background:var(--bg-2);display:flex;flex-direction:column;gap:.9rem}
+.tile-line{background:transparent;box-shadow:inset 0 0 0 1px var(--line)}
+.tile-tint{background:var(--tint)}
+.tile-ink{background:var(--band-bg);color:var(--band-ink)}
+.tile-ink .h3{color:var(--band-ink)}
+.tile.tile-ink p{color:var(--band-ink-2)}
+.tile .ic-lead{width:1.75rem;height:1.75rem;color:var(--accent-text)}
+.tile-ink .ic-lead{color:var(--band-accent)}
+.tile p{color:var(--ink-2);max-width:46ch}
+.tile{transition:translate 200ms var(--ease)}
+
+.check-list{display:grid;gap:.6rem;margin-top:.25rem}
+.check-list li{display:flex;gap:.65rem;align-items:flex-start;color:var(--ink-2)}
+.check-list .ic{color:var(--accent-text);margin-top:.2rem}
+.tile.tile-ink .check-list li{color:var(--band-ink-2)}
+.tile-ink .check-list .ic{color:var(--band-accent)}
+
+.chip{display:inline-flex;align-items:center;min-height:2.5rem;padding:.35rem 1rem;border-radius:999px;font-size:.9375rem;font-weight:500;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line);background:transparent}
+
+/* ===== Avaliações ===== */
+.stars{display:inline-flex;gap:.15rem;color:var(--accent)}
+.stars .ic{width:1.1rem;height:1.1rem}
+.quote{display:flex;flex-direction:column;gap:1rem;border-radius:var(--radius);padding:clamp(1.5rem,1rem + 1.4vw,2rem);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.quote blockquote{color:var(--ink);font-size:1.0625rem;line-height:1.6}
+.quote-feature{background:var(--band-bg);box-shadow:none}
+.quote-feature blockquote{font-family:'Outfit',sans-serif;font-weight:300;font-size:clamp(1.5rem,1.1rem + 1.4vw,2.25rem);line-height:1.25;letter-spacing:-.015em;color:var(--band-ink)}
+.quote-feature .who b{color:var(--band-ink)}
+.quote-feature .who small{color:var(--band-ink-2)}
+.quote-feature .stars{color:var(--band-accent)}
+.who{display:flex;align-items:center;gap:.8rem;margin-top:auto}
+.avatar{display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:999px;background:var(--tint);color:var(--accent-text);font-family:'Outfit',sans-serif;font-weight:600}
+.quote-feature .avatar{background:#2F3436;color:var(--band-accent)}
+.who b{display:block;font-weight:600;line-height:1.2;font-size:1rem}
+.who small{display:block;color:var(--ink-2);font-size:.875rem;line-height:1.3}
+
+/* ===== FAQ ===== */
+.faq details{border-radius:var(--radius);background:var(--bg-2);transition:background-color 200ms ease}
+.faq details::details-content{block-size:0;overflow:clip;opacity:0;transition:block-size 220ms var(--ease),opacity 180ms ease,content-visibility 220ms allow-discrete}
+.faq details[open]::details-content{block-size:auto;opacity:1}
+.faq details[open]{background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem;padding:1rem 1.5rem;font-family:'Outfit',sans-serif;font-weight:600;font-size:1.1875rem;line-height:1.3;border-radius:var(--radius);transition:transform 160ms var(--ease)}
+.faq summary:active{transform:scale(.99)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .ic{transition:transform 220ms var(--ease);color:var(--accent-text)}
+.faq details[open] summary .ic{transform:rotate(180deg)}
+.faq .ans{padding:0 1.5rem 1.4rem;color:var(--ink-2);max-width:58ch}
+
+/* ===== Contato (faixa escura) ===== */
+.band{background:var(--band-bg);color:var(--band-ink)}
+.band h2,.band h3{color:var(--band-ink)}
+.band p,.band address{color:var(--band-ink-2)}
+.band a:not(.btn){color:var(--band-ink)}
+.band :focus-visible{outline-color:var(--band-accent)}
+.place{border-radius:var(--radius);padding:1.75rem;box-shadow:inset 0 0 0 1px #3A4042;display:flex;flex-direction:column;gap:.5rem}
+.place .ic{color:var(--band-accent)}
+.place a.maplink{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;font-weight:500;text-decoration:underline;text-decoration-color:var(--band-accent);text-decoration-thickness:2px;text-underline-offset:.3em}
+
+/* ===== Rodapé ===== */
+.foot a{color:var(--ink-2);text-decoration:none;display:inline-flex;align-items:center;min-height:2.5rem;transition:color 150ms ease}
+.social{display:inline-grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);color:var(--ink)!important;transition:background-color 160ms ease,color 160ms ease,transform 160ms var(--ease)}
+.social:active{transform:scale(.94)}
+
+/* ===== WhatsApp flutuante (mobile e tablet) ===== */
+.fab{position:fixed;right:max(1rem,env(safe-area-inset-right));bottom:max(1rem,env(safe-area-inset-bottom));z-index:60;display:grid;place-items:center;width:3.5rem;height:3.5rem;border-radius:999px;background:var(--btn-bg);color:var(--btn-ink);box-shadow:0 14px 30px -12px rgb(31 33 35 / .6);transition:transform 160ms var(--ease),background-color 160ms ease,color 160ms ease}
+.fab .ic{width:1.75rem;height:1.75rem}
+.fab:active{transform:scale(.94)}
+@media (min-width:1024px){.fab{display:none}}
+
+/* ===== Hover: apenas com ponteiro fino (celular não dispara hover ao tocar) ===== */
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--btn-hover-bg);color:var(--btn-hover-ink);box-shadow:0 10px 24px -14px rgb(31 33 35 / .5)}
+  .btn:hover .ic-go{transform:translateX(3px)}
+  .btn-on-band:hover{background:var(--band-accent);color:#1F2123;box-shadow:none}
+  .link-quiet:hover{color:var(--accent-text)}
+  .link-quiet:hover .ic-go{transform:translateX(3px)}
+  .link-quiet:hover .ic-up{transform:translate(2px,-2px)}
+  .nav-link:hover{color:var(--ink)}
+  .nav-link:hover::after{transform:scaleX(1)}
+  .menu-btn:hover{background:var(--bg-2)}
+  .tile:hover{translate:0 -2px}
+  .faq summary:hover .ic{transform:translateY(2px)}
+  .faq details[open] summary:hover .ic{transform:rotate(180deg) translateY(2px)}
+  .foot a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent)}
+  .social:hover{background:var(--btn-hover-bg);color:var(--btn-hover-ink)!important;text-decoration:none!important}
+  .fab:hover{background:var(--btn-hover-bg);color:var(--btn-hover-ink)}
+  .place a.maplink:hover .ic{transform:translate(2px,-2px)}
+}
+.place a.maplink .ic{transition:transform 200ms var(--ease)}
+
+/* ===== Movimento: entrada do hero e revelação ao rolar (conteúdo visível sem JS) ===== */
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
+@keyframes settle{from{opacity:0;transform:translateY(16px) scale(1.01)}}
+@keyframes chipIn{from{opacity:0;transform:translateY(8px)}}
+@keyframes fabIn{from{opacity:0;transform:translateY(8px) scale(.92)}}
+@keyframes fadeIn{from{opacity:0}}
+@media (prefers-reduced-motion:no-preference){
+  /* hero: o texto sobe em sequência, a foto assenta e só então o cartão com o nome aparece */
+  .hero-in{animation:rise 700ms var(--ease) backwards;animation-delay:var(--d,0ms)}
+  .hero-photo{animation:settle 900ms var(--ease) 120ms backwards}
+  .name-chip{animation:chipIn 500ms var(--ease) 650ms backwards}
+  .fab{animation:fabIn 450ms var(--ease) 1.2s backwards}
+  /* revelação ao rolar: títulos sobem, cartões assentam, citações só aparecem */
+  .js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity 600ms var(--ease),transform 600ms var(--ease);transition-delay:var(--d,0ms)}
+  .js [data-reveal="settle"]{transform:translateY(8px) scale(.98)}
+  .js [data-reveal="fade"]{transform:none}
+  .js [data-reveal].is-in{opacity:1;transform:none}
+  /* estrelas da avaliação em destaque acendem em sequência (momento raro, só na primeira vez) */
+  .js .quote-feature .stars .ic{opacity:0;transform:scale(.8);transition:opacity 300ms ease,transform 300ms var(--ease)}
+  .js .quote-feature.is-in .stars .ic{opacity:1;transform:none}
+  .js .quote-feature.is-in .stars .ic:nth-child(1){transition-delay:250ms}
+  .js .quote-feature.is-in .stars .ic:nth-child(2){transition-delay:310ms}
+  .js .quote-feature.is-in .stars .ic:nth-child(3){transition-delay:370ms}
+  .js .quote-feature.is-in .stars .ic:nth-child(4){transition-delay:430ms}
+  .js .quote-feature.is-in .stars .ic:nth-child(5){transition-delay:490ms}
+}
+/* Movimento reduzido: menos e mais suave, não zero. Some o deslocamento; ficam fades curtos e trocas de cor. */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-in,.hero-photo,.name-chip,.fab{animation:fadeIn 300ms ease backwards}
+  .js [data-reveal]{opacity:0;transition:opacity 300ms ease}
+  .js [data-reveal].is-in{opacity:1}
+  .btn:active,.fab:active,.link-quiet:active,.menu-btn:active,.social:active,.faq summary:active{transform:none}
+  .tile,.btn .ic,.link-quiet .ic,.faq summary .ic,.nav-link::after,.menu-panel{transition:none}
+  .faq details::details-content{transition:none}
+}
+
+/* ===== Mobile: assimetrias colapsam em coluna única ===== */
+@media (max-width:1023px){
+  .hero-photo{justify-self:center;max-width:26rem}
+  .hero-photo::before{inset:1rem -.75rem -1rem .75rem}
+  .name-chip{left:-.5rem}
+}
+@media (max-width:639px){
+  .btn{white-space:normal}
+  .btn-block-sm{width:100%}
+}
+</style>
+
+<!-- SEO local: LocalBusiness apenas com dados reais (endereços, telefone, perfis) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://gustavoteodoro10.github.io/PsicoDarquiaMoreira/#maua",
+      "name": "Psicóloga Dárquia Moreira (Mauá)",
+      "description": "Psicóloga clínica, especialista em Terapia Cognitivo-Comportamental. Atendimento online e presencial.",
+      "url": "https://gustavoteodoro10.github.io/PsicoDarquiaMoreira/",
+      "image": "https://gustavoteodoro10.github.io/PsicoDarquiaMoreira/assets/img/og-darquia.jpg",
+      "telephone": "+55 11 98593-9585",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Campos Sales, 167, Vila Bocaina",
+        "addressLocality": "Mauá",
+        "addressRegion": "SP",
+        "postalCode": "09310-040",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://www.instagram.com/psicologadarquia/",
+        "https://www.doctoralia.com.br/darquia-moreira/psicologo/sao-paulo"
+      ]
+    },
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://gustavoteodoro10.github.io/PsicoDarquiaMoreira/#mooca",
+      "name": "Psicóloga Dárquia Moreira (Mooca)",
+      "description": "Psicóloga clínica, especialista em Terapia Cognitivo-Comportamental. Atendimento online e presencial.",
+      "url": "https://gustavoteodoro10.github.io/PsicoDarquiaMoreira/",
+      "image": "https://gustavoteodoro10.github.io/PsicoDarquiaMoreira/assets/img/og-darquia.jpg",
+      "telephone": "+55 11 98593-9585",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Radial Leste, 2126, Mooca",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://www.instagram.com/psicologadarquia/",
+        "https://www.doctoralia.com.br/darquia-moreira/psicologo/sao-paulo"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<!-- Sprite de ícones Phosphor (inline) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+<symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+<symbol id="i-brain" viewBox="0 0 256 256"><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z"/></symbol>
+<symbol id="i-buildings" viewBox="0 0 256 256"><path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"/></symbol>
+<symbol id="i-caret-down" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+<symbol id="i-check" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
+<symbol id="i-compass" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM172.42,72.84l-64,32a8.05,8.05,0,0,0-3.58,3.58l-32,64A8,8,0,0,0,80,184a8.1,8.1,0,0,0,3.58-.84l64-32a8.05,8.05,0,0,0,3.58-3.58l32-64a8,8,0,0,0-10.74-10.74ZM138,138,97.89,158.11,118,118l40.15-20.07Z"/></symbol>
+<symbol id="i-envelope-simple" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></symbol>
+<symbol id="i-first-aid-kit" viewBox="0 0 256 256"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,200H40V72H216V200Zm-56-64a8,8,0,0,1-8,8H136v16a8,8,0,0,1-16,0V144H104a8,8,0,0,1,0-16h16V112a8,8,0,0,1,16,0v16h16A8,8,0,0,1,160,136Z"/></symbol>
+<symbol id="i-fork-knife" viewBox="0 0 256 256"><path d="M72,88V40a8,8,0,0,1,16,0V88a8,8,0,0,1-16,0ZM216,40V224a8,8,0,0,1-16,0V176H152a8,8,0,0,1-8-8,268.75,268.75,0,0,1,7.22-56.88c9.78-40.49,28.32-67.63,53.63-78.47A8,8,0,0,1,216,40ZM200,53.9c-32.17,24.57-38.47,84.42-39.7,106.1H200ZM119.89,38.69a8,8,0,1,0-15.78,2.63L112,88.63a32,32,0,0,1-64,0l7.88-47.31a8,8,0,1,0-15.78-2.63l-8,48A8.17,8.17,0,0,0,32,88a48.07,48.07,0,0,0,40,47.32V224a8,8,0,0,0,16,0V135.32A48.07,48.07,0,0,0,128,88a8.17,8.17,0,0,0-.11-1.31Z"/></symbol>
+<symbol id="i-google-logo" viewBox="0 0 256 256"><path d="M224,128a96,96,0,1,1-21.95-61.09,8,8,0,1,1-12.33,10.18A80,80,0,1,0,207.6,136H128a8,8,0,0,1,0-16h88A8,8,0,0,1,224,128Z"/></symbol>
+<symbol id="i-heartbeat" viewBox="0 0 256 256"><path d="M72,144H32a8,8,0,0,1,0-16H67.72l13.62-20.44a8,8,0,0,1,13.32,0l25.34,38,9.34-14A8,8,0,0,1,136,128h24a8,8,0,0,1,0,16H140.28l-13.62,20.44a8,8,0,0,1-13.32,0L88,126.42l-9.34,14A8,8,0,0,1,72,144ZM178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,.75,0,1.5,0,2.25a8,8,0,1,0,16-.5c0-.58,0-1.17,0-1.75A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46c0,53.61-77.76,102.15-96,112.8-10.83-6.31-42.63-26-66.68-52.21a8,8,0,1,0-11.8,10.82c31.17,34,72.93,56.68,74.69,57.63a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40Z"/></symbol>
+<symbol id="i-hospital" viewBox="0 0 256 256"><path d="M248,208h-8V128a16,16,0,0,0-16-16H168V48a16,16,0,0,0-16-16H56A16,16,0,0,0,40,48V208H32a8,8,0,0,0,0,16H248a8,8,0,0,0,0-16Zm-24-80v80H168V128ZM56,48h96V208H136V160a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8v48H56Zm64,160H88V168h32ZM72,96a8,8,0,0,1,8-8H96V72a8,8,0,0,1,16,0V88h16a8,8,0,0,1,0,16H112v16a8,8,0,0,1-16,0V104H80A8,8,0,0,1,72,96Z"/></symbol>
+<symbol id="i-instagram-logo" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></symbol>
+<symbol id="i-list" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol>
+<symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+<symbol id="i-star-fill" viewBox="0 0 256 256"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
+<symbol id="i-star" viewBox="0 0 256 256"><path d="M239.18,97.26A16.38,16.38,0,0,0,224.92,86l-59-4.76L143.14,26.15a16.36,16.36,0,0,0-30.27,0L90.11,81.23,31.08,86a16.46,16.46,0,0,0-9.37,28.86l45,38.83L53,211.75a16.38,16.38,0,0,0,24.5,17.82L128,198.49l50.53,31.08A16.4,16.4,0,0,0,203,211.75l-13.76-58.07,45-38.83A16.43,16.43,0,0,0,239.18,97.26Zm-15.34,5.47-48.7,42a8,8,0,0,0-2.56,7.91l14.88,62.8a.37.37,0,0,1-.17.48c-.18.14-.23.11-.38,0l-54.72-33.65a8,8,0,0,0-8.38,0L69.09,215.94c-.15.09-.19.12-.38,0a.37.37,0,0,1-.17-.48l14.88-62.8a8,8,0,0,0-2.56-7.91l-48.7-42c-.12-.1-.23-.19-.13-.5s.18-.27.33-.29l63.92-5.16A8,8,0,0,0,103,91.86l24.62-59.61c.08-.17.11-.25.35-.25s.27.08.35.25L153,91.86a8,8,0,0,0,6.75,4.92l63.92,5.16c.15,0,.24,0,.33.29S224,102.63,223.84,102.73Z"/></symbol>
+<symbol id="i-video-camera" viewBox="0 0 256 256"><path d="M251.77,73a8,8,0,0,0-8.21.39L208,97.05V72a16,16,0,0,0-16-16H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V159l35.56,23.71A8,8,0,0,0,248,184a8,8,0,0,0,8-8V80A8,8,0,0,0,251.77,73ZM192,184H32V72H192V184Zm48-22.95-32-21.33V116.28L240,95Z"/></symbol>
+<symbol id="i-whatsapp-logo" viewBox="0 0 256 256"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></symbol>
+<symbol id="i-x" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol>
+</svg>
+<a href="#conteudo" class="skip">Ir para o conteúdo</a>
+
+<!-- ===================== NAVEGAÇÃO ===================== -->
+<header class="nav" id="topo">
+  <div class="mx-auto flex h-[72px] max-w-[1200px] items-center justify-between px-5 lg:px-8">
+    <!-- EDITÁVEL: nome (sem logotipo oficial, o nome é composto em texto) -->
+    <a href="#inicio" class="wordmark" aria-label="Dárquia Moreira, psicóloga clínica. Ir para o início">
+      <b>Dárquia Moreira</b>
+      <span>Psicóloga Clínica</span>
+    </a>
+
+    <nav aria-label="Principal" class="hidden items-center gap-6 lg:flex">
+      <a class="nav-link" href="#atendimento">Atendimento</a>
+      <a class="nav-link" href="#sobre">Sobre</a>
+      <a class="nav-link" href="#avaliacoes">Avaliações</a>
+      <a class="nav-link" href="#planos">Planos</a>
+      <a class="nav-link" href="#contato">Contato</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <!-- EDITÁVEL: link do WhatsApp (número + mensagem pré-programada) -->
+      <a class="btn btn-sm hidden lg:inline-flex" data-gc-event="cta-nav"
+         href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Vi%20o%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o."
+         target="_blank" rel="noopener">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>Agendar sessão
+      </a>
+      <button type="button" class="menu-btn lg:hidden" id="menu-btn" aria-expanded="false" aria-controls="menu-panel" aria-label="Abrir menu">
+        <svg class="ic" style="width:1.6rem;height:1.6rem" aria-hidden="true" id="ic-open"><use href="#i-list"/></svg>
+        <svg class="ic" style="width:1.6rem;height:1.6rem;display:none" aria-hidden="true" id="ic-close"><use href="#i-x"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="menu-panel lg:hidden" id="menu-panel" hidden>
+    <nav aria-label="Menu móvel" class="mx-auto flex max-w-[1200px] flex-col px-5 pb-6 pt-2">
+      <a class="m-link" href="#atendimento">Atendimento</a>
+      <a class="m-link" href="#sobre">Sobre</a>
+      <a class="m-link" href="#avaliacoes">Avaliações</a>
+      <a class="m-link" href="#planos">Planos</a>
+      <a class="m-link" href="#contato">Contato</a>
+      <a class="btn btn-block-sm mt-4" data-gc-event="cta-menu"
+         href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Vi%20o%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o."
+         target="_blank" rel="noopener">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>Agendar sessão
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ===================== HERO ===================== -->
+<section id="inicio" aria-labelledby="h-hero" class="mx-auto grid max-w-[1200px] items-center gap-10 px-5 pb-16 pt-10 lg:min-h-[calc(100dvh-72px)] lg:grid-cols-12 lg:gap-8 lg:px-8 lg:pb-20 lg:pt-12">
+  <div class="lg:col-span-7">
+    <!-- EDITÁVEL: título, subtítulo e CTA do hero -->
+    <h1 id="h-hero" class="h1 hero-in" style="--d:60ms">Cuidar da mente começa por uma boa conversa.</h1>
+    <p class="lead hero-in mt-6" style="--d:160ms">Psicóloga clínica especialista em Terapia Cognitivo-Comportamental. Atendimento online e presencial em Mauá e na Mooca.</p>
+    <div class="hero-in mt-9 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6" style="--d:260ms">
+      <a class="btn btn-block-sm" data-gc-event="cta-hero"
+         href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Vi%20o%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o."
+         target="_blank" rel="noopener">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>Agendar sessão
+      </a>
+      <a class="link-quiet" href="#sobre">Como funciona a terapia
+        <svg class="ic ic-go" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+
+  <figure class="hero-photo lg:col-span-5">
+    <!-- EDITÁVEL: foto do hero (arquivo em assets/img) -->
+    <img src="assets/img/darquia-hero.webp"
+         srcset="assets/img/darquia-hero-640.webp 640w, assets/img/darquia-hero.webp 960w"
+         sizes="(min-width: 1024px) 500px, 90vw"
+         width="960" height="1200" fetchpriority="high" decoding="async"
+         alt="Dárquia Moreira, psicóloga clínica, sorrindo sentada em um sofá claro, de blusa preta e colar dourado">
+    <figcaption class="name-chip">
+      <b>Dárquia Moreira</b>
+      <span>Psicóloga Clínica, CRP 06/130418</span>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ===================== ATENDIMENTO (bento) ===================== -->
+<section id="atendimento" aria-labelledby="h-atend" class="mx-auto max-w-[1200px] px-5 py-20 lg:px-8 lg:py-28">
+  <div data-reveal>
+    <h2 id="h-atend" class="h2" style="max-width:18ch">Em que a terapia pode ajudar</h2>
+    <p class="lead mt-5" style="max-width:52ch">Terapia Cognitivo-Comportamental é prática e focada em metas. Nas sessões, você aprende ferramentas para lidar com seus desafios no dia a dia.</p>
+  </div>
+
+  <!-- EDITÁVEL: temas atendidos (textos reescritos a partir do site atual e do Instagram da profissional) -->
+  <div class="mt-12 grid gap-4 lg:grid-cols-12">
+    <article class="tile lg:col-span-7" data-reveal="settle">
+      <svg class="ic ic-lead" aria-hidden="true"><use href="#i-brain"/></svg>
+      <h3 class="h3">Ansiedade e estresse</h3>
+      <p>Reduzir os sintomas, aprender técnicas de relaxamento e criar formas saudáveis de lidar com o que pesa no dia a dia.</p>
+    </article>
+    <article class="tile tile-line lg:col-span-5" data-reveal="settle" style="--d:80ms">
+      <svg class="ic ic-lead" aria-hidden="true"><use href="#i-heartbeat"/></svg>
+      <h3 class="h3">Depressão</h3>
+      <p>Reestruturar padrões negativos de pensamento, melhorar o humor e ganhar uma nova perspectiva sobre a vida.</p>
+    </article>
+
+    <article class="tile tile-tint lg:col-span-5" data-reveal="settle">
+      <svg class="ic ic-lead" aria-hidden="true"><use href="#i-fork-knife"/></svg>
+      <h3 class="h3">Transtornos alimentares</h3>
+      <p>Entender as causas emocionais por trás da relação com a comida e reconstruir autoestima e imagem corporal.</p>
+    </article>
+    <article class="tile lg:col-span-7" data-reveal="settle" style="--d:80ms">
+      <svg class="ic ic-lead" aria-hidden="true"><use href="#i-compass"/></svg>
+      <h3 class="h3">Autoconhecimento e desenvolvimento pessoal</h3>
+      <p>Compreender suas motivações, medos e crenças limitantes para tomar decisões com mais clareza.</p>
+    </article>
+
+    <article class="tile tile-ink lg:col-span-7" data-reveal="settle">
+      <svg class="ic ic-lead" aria-hidden="true"><use href="#i-first-aid-kit"/></svg>
+      <h3 class="h3">Acompanhamento na cirurgia bariátrica</h3>
+      <p>Suporte emocional, psicológico e comportamental antes e depois da cirurgia, para uma adaptação segura e sustentável. Segue o Protocolo Talita Lopes Marques.</p>
+    </article>
+    <article class="tile tile-line lg:col-span-5" data-reveal="settle" style="--d:80ms">
+      <svg class="ic ic-lead" aria-hidden="true"><use href="#i-hospital"/></svg>
+      <h3 class="h3">Psicologia hospitalar</h3>
+      <p>Apoio emocional a pacientes, familiares e equipes de saúde diante de internações, doenças graves e luto.</p>
+    </article>
+  </div>
+
+  <div class="mt-10" data-reveal>
+    <a class="btn btn-block-sm" data-gc-event="cta-servicos"
+       href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Vi%20no%20site%20os%20temas%20que%20voc%C3%AA%20atende%20e%20gostaria%20de%20conversar%20sobre%20o%20meu%20caso."
+       target="_blank" rel="noopener">
+      <svg class="ic" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>Agendar sessão
+    </a>
+  </div>
+</section>
+
+<!-- ===================== SOBRE ===================== -->
+<section id="sobre" aria-labelledby="h-sobre" class="mx-auto grid max-w-[1200px] items-center gap-12 px-5 py-20 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:py-28">
+  <figure class="lg:col-span-5" data-reveal>
+    <!-- EDITÁVEL: foto da seção Sobre -->
+    <img src="assets/img/darquia-sobre.webp"
+         srcset="assets/img/darquia-sobre-600.webp 600w, assets/img/darquia-sobre.webp 880w"
+         sizes="(min-width: 1024px) 460px, 90vw"
+         width="880" height="1100" loading="lazy" decoding="async"
+         style="border-radius:var(--radius);width:100%;max-width:30rem;aspect-ratio:4/5;object-fit:cover;object-position:50% 10%;background:var(--bg-2)"
+         alt="Dárquia Moreira, de blusa branca, apoiada no encosto de uma cadeira e sorrindo para a câmera">
+  </figure>
+
+  <div class="lg:col-span-7" data-reveal style="--d:80ms">
+    <h2 id="h-sobre" class="h2" style="max-width:16ch">Conheça a Dárquia</h2>
+    <!-- EDITÁVEL: texto de apresentação (baseado em site, Instagram e Doctoralia da profissional) -->
+    <p class="lead mt-5" style="max-width:54ch">Sou psicóloga clínica e acompanho pessoas que querem lidar melhor com ansiedade, humor, alimentação e momentos difíceis de saúde. Já atuei em clínicas e em hospital, e hoje atendo online e presencialmente.</p>
+
+    <dl class="mt-8 grid gap-x-8 gap-y-5 sm:grid-cols-2">
+      <div><dt class="font-semibold">Pós-graduação em Terapia Cognitivo-Comportamental</dt><dd class="muted text-[.9375rem]">Faveni, 2020</dd></div>
+      <div><dt class="font-semibold">Pós-graduação em Psicologia Hospitalar</dt><dd class="muted text-[.9375rem]">Faveni, 2021</dd></div>
+      <div><dt class="font-semibold">Pós-graduação em Psicopedagogia</dt><dd class="muted text-[.9375rem]">Faculdade de Conchas, 2019</dd></div>
+      <div><dt class="font-semibold">Graduação em Psicologia</dt><dd class="muted text-[.9375rem]">Anhanguera, 2015</dd></div>
+    </dl>
+
+    <h3 class="h3 mt-10">A TCC na prática</h3>
+    <p class="muted mt-2 measure">Uma terapia de curto prazo, estruturada e orientada a metas. Entre as técnicas usadas:</p>
+    <ul class="mt-4 flex flex-wrap gap-2">
+      <li class="chip">Questionamento de pensamentos negativos</li>
+      <li class="chip">Reestruturação cognitiva</li>
+      <li class="chip">Técnicas de relaxamento</li>
+      <li class="chip">Exposição gradual</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== AVALIAÇÕES ===================== -->
+<section id="avaliacoes" aria-labelledby="h-aval" class="mx-auto max-w-[1200px] px-5 py-20 lg:px-8 lg:py-28">
+  <div data-reveal>
+    <h2 id="h-aval" class="h2">O que dizem os pacientes</h2>
+    <p class="muted mt-5 flex flex-wrap items-center gap-x-3 gap-y-1">
+      <span class="stars" role="img" aria-label="5 estrelas">
+        <svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg>
+      </span>
+      <span><b class="text-[var(--ink)]">5,0</b> no Google, com 57 avaliações</span>
+    </p>
+  </div>
+
+  <!-- EDITÁVEL: avaliações reais do Google (perfil de Mauá), copiadas em 07/10/2026. Se editar, mantenha o texto original. -->
+  <div class="mt-12 grid gap-4 lg:grid-cols-12">
+    <figure class="quote quote-feature lg:col-span-5" data-reveal="fade">
+      <span class="stars" role="img" aria-label="5 estrelas"><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg></span>
+      <blockquote>“Uma profissional incrível! Me senti ouvida e acolhida desde a primeira sessão. Recomendo de olhos fechados.”</blockquote>
+      <figcaption class="who"><span class="avatar" aria-hidden="true">T</span><span><b>Thaissa Sobrinho</b><small>Avaliação no Google</small></span></figcaption>
+    </figure>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:col-span-7">
+      <figure class="quote" data-reveal="fade" style="--d:60ms">
+        <span class="stars" role="img" aria-label="5 estrelas"><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg></span>
+        <blockquote>“Não sei como eu vivia sem essa mulher na minha vida. Profissional excelente.”</blockquote>
+        <figcaption class="who"><span class="avatar" aria-hidden="true">C</span><span><b>Carolina Nascimento</b><small>Avaliação no Google</small></span></figcaption>
+      </figure>
+      <figure class="quote" data-reveal="fade" style="--d:120ms">
+        <span class="stars" role="img" aria-label="5 estrelas"><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg></span>
+        <blockquote>“Uma profissional incrível, que se dedica a ajudar as pessoas a compreenderem suas emoções, superarem desafios e alcançarem um maior bem-estar emocional.”</blockquote>
+        <figcaption class="who"><span class="avatar" aria-hidden="true">N</span><span><b>Nicole Gussonato</b><small>Avaliação no Google</small></span></figcaption>
+      </figure>
+      <figure class="quote" data-reveal="fade" style="--d:60ms">
+        <span class="stars" role="img" aria-label="5 estrelas"><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg></span>
+        <blockquote>“Experiência maravilhosa, ótima profissional e ambiente muito confortável, melhorei muito depois de começar a terapia.”</blockquote>
+        <figcaption class="who"><span class="avatar" aria-hidden="true">J</span><span><b>Júlia De Araújo</b><small>Avaliação no Google</small></span></figcaption>
+      </figure>
+      <figure class="quote" data-reveal="fade" style="--d:120ms">
+        <span class="stars" role="img" aria-label="5 estrelas"><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star-fill"/></svg></span>
+        <blockquote>“Excelente profissional, super atenciosa, dinâmica e focada em sempre auxiliar da melhor forma seus pacientes. Recomendo muito.”</blockquote>
+        <figcaption class="who"><span class="avatar" aria-hidden="true">R</span><span><b>Rafael Magalhaes</b><small>Avaliação no Google</small></span></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8" data-reveal>
+    <a class="btn btn-block-sm" data-gc-event="cta-avaliacoes"
+       href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Li%20as%20avalia%C3%A7%C3%B5es%20no%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o."
+       target="_blank" rel="noopener">
+      <svg class="ic" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>Agendar sessão
+    </a>
+    <!-- EDITÁVEL: troque pelo link de compartilhamento do perfil no Google Maps quando tiver -->
+    <a class="link-quiet" href="https://www.google.com/search?q=Psic%C3%B3loga+D%C3%A1rquia+Moreira+Mau%C3%A1" target="_blank" rel="noopener">
+      <svg class="ic" aria-hidden="true"><use href="#i-google-logo"/></svg>Ver todas as avaliações no Google
+      <svg class="ic ic-up" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+    <a class="link-quiet" href="https://www.doctoralia.com.br/darquia-moreira/psicologo/sao-paulo" target="_blank" rel="noopener">
+      Perfil no Doctoralia
+      <svg class="ic ic-up" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+  </div>
+</section>
+
+<!-- ===================== PLANOS ===================== -->
+<section id="planos" aria-labelledby="h-planos" class="mx-auto max-w-[1200px] px-5 py-20 lg:px-8 lg:py-28">
+  <div data-reveal>
+    <h2 id="h-planos" class="h2">Escolha como começar</h2>
+    <p class="lead mt-5" style="max-width:48ch">Os valores são combinados diretamente pelo WhatsApp.</p>
+  </div>
+
+  <!-- EDITÁVEL: planos (sem preços). Detalhes como frequência das sessões são combinados com a psicóloga. -->
+  <div class="mt-12 grid gap-4 lg:grid-cols-2">
+    <article class="tile lg:col-span-2 lg:flex-row lg:items-center lg:justify-between lg:gap-12" data-reveal>
+      <div class="lg:max-w-[46rem]">
+        <h3 class="h3" style="font-size:1.625rem">Sessão pontual</h3>
+        <p class="mt-2">Para conhecer a terapia ou trabalhar um momento específico. Uma sessão de cerca de 50 minutos, online ou presencial.</p>
+      </div>
+      <a class="btn btn-block-sm lg:shrink-0" data-gc-event="cta-plano-pontual"
+         href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Gostaria%20de%20saber%20mais%20sobre%20a%20sess%C3%A3o%20pontual."
+         target="_blank" rel="noopener">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>Combinar sessão pontual
+      </a>
+    </article>
+
+    <article class="tile tile-ink" data-reveal>
+      <h3 class="h3" style="font-size:1.625rem">Plano 90 dias</h3>
+      <p>Acompanhamento por 3 meses para trabalhar um objetivo com continuidade.</p>
+      <ul class="check-list">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Frequência combinada com a psicóloga</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Online ou presencial</li>
+      </ul>
+      <a class="btn btn-on-band btn-block-sm mt-4 self-start" data-gc-event="cta-plano-90-dias"
+         href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20de%2090%20dias."
+         target="_blank" rel="noopener">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>Combinar plano de 90 dias
+      </a>
+    </article>
+
+    <article class="tile tile-line" data-reveal style="--d:80ms">
+      <h3 class="h3" style="font-size:1.625rem">Plano 180 dias</h3>
+      <p>Acompanhamento por 6 meses, para quem quer aprofundar o processo e manter o ritmo da terapia.</p>
+      <ul class="check-list">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Frequência combinada com a psicóloga</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Online ou presencial</li>
+      </ul>
+      <a class="btn btn-block-sm mt-4 self-start" data-gc-event="cta-plano-180-dias"
+         href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20de%20180%20dias."
+         target="_blank" rel="noopener">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>Combinar plano de 180 dias
+      </a>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== DÚVIDAS ===================== -->
+<section id="duvidas" aria-labelledby="h-faq" class="mx-auto grid max-w-[1200px] gap-10 px-5 py-20 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:py-28">
+  <div class="lg:col-span-4" data-reveal>
+    <h2 id="h-faq" class="h2" style="max-width:12ch">Dúvidas frequentes</h2>
+  </div>
+
+  <!-- EDITÁVEL: perguntas e respostas (fonte: site atual e Instagram da profissional) -->
+  <div class="faq grid gap-3 lg:col-span-8" data-reveal style="--d:80ms">
+    <details>
+      <summary>Como funciona a terapia online?<svg class="ic" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
+      <p class="ans">É uma forma prática de receber atendimento psicológico sem sair de casa. As sessões acontecem por Google Meet ou WhatsApp.</p>
+    </details>
+    <details>
+      <summary>Também atende presencialmente?<svg class="ic" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
+      <p class="ans">Sim. O atendimento presencial é em dois endereços: Mauá (Vila Bocaina) e Mooca, em São Paulo, perto do metrô Bresser-Mooca.</p>
+    </details>
+    <details>
+      <summary>Qual a duração da sessão?<svg class="ic" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
+      <p class="ans">Em média, 50 minutos.</p>
+    </details>
+    <details>
+      <summary>Quais as formas de pagamento?<svg class="ic" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
+      <p class="ans">O pagamento é sempre antecipado. A primeira consulta é por Pix; as demais podem ser por Pix, cartão ou dinheiro.</p>
+    </details>
+    <details>
+      <summary>Qual o valor da sessão?<svg class="ic" aria-hidden="true"><use href="#i-caret-down"/></svg></summary>
+      <div class="ans">
+        <p>De acordo com o Conselho Federal de Psicologia, os valores não podem ser divulgados em publicidade. Para saber mais, é só perguntar.</p>
+        <a class="link-quiet mt-2" data-gc-event="cta-faq"
+           href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Gostaria%20de%20saber%20os%20valores%20das%20sess%C3%B5es."
+           target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>Perguntar os valores no WhatsApp</a>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ===================== CONTATO ===================== -->
+<section id="contato" aria-labelledby="h-contato" class="band px-5 py-20 lg:px-8 lg:py-28">
+  <div class="mx-auto max-w-[1200px]">
+    <div class="max-w-[44rem]" data-reveal>
+      <h2 id="h-contato" class="h2" style="color:var(--band-ink)">Vamos conversar sobre o seu momento?</h2>
+      <p class="lead mt-5" style="color:var(--band-ink-2)">Mande uma mensagem e combine o melhor formato e horário para você.</p>
+      <a class="btn btn-on-band btn-block-sm mt-9" data-gc-event="cta-contato"
+         href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Vi%20o%20site%20e%20gostaria%20de%20combinar%20uma%20sess%C3%A3o.%20Qual%20hor%C3%A1rio%20voc%C3%AA%20tem%20dispon%C3%ADvel%3F"
+         target="_blank" rel="noopener">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>Agendar sessão
+      </a>
+    </div>
+
+    <!-- EDITÁVEL: endereços (os dois atendimentos presenciais) -->
+    <div class="mt-16 grid gap-4 md:grid-cols-2" data-reveal>
+      <div class="place">
+        <svg class="ic" style="width:1.75rem;height:1.75rem" aria-hidden="true"><use href="#i-map-pin"/></svg>
+        <h3 class="h3">Mauá</h3>
+        <address class="not-italic">R. Campos Sales, 167, Vila Bocaina<br>Mauá, SP, 09310-040</address>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=R.+Campos+Sales%2C+167%2C+Vila+Bocaina%2C+Mau%C3%A1+SP" target="_blank" rel="noopener">Abrir no mapa
+          <svg class="ic ic-up" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+      <div class="place">
+        <svg class="ic" style="width:1.75rem;height:1.75rem" aria-hidden="true"><use href="#i-map-pin"/></svg>
+        <h3 class="h3">Mooca, São Paulo</h3>
+        <address class="not-italic">Av. Radial Leste, 2126, Mooca<br>São Paulo, SP, perto do metrô Bresser-Mooca</address>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Av.+Radial+Leste%2C+2126%2C+Mooca%2C+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener">Abrir no mapa
+          <svg class="ic ic-up" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+    <p class="mt-6 flex items-center gap-3" style="color:var(--band-ink-2)" data-reveal>
+      <svg class="ic" style="color:var(--band-accent)" aria-hidden="true"><use href="#i-video-camera"/></svg>
+      Atendimento online por Google Meet ou WhatsApp.
+    </p>
+  </div>
+</section>
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="foot mx-auto max-w-[1200px] px-5 pb-10 pt-16 lg:px-8">
+  <div class="grid gap-10 md:grid-cols-12">
+    <div class="md:col-span-5">
+      <!-- Sem logotipo oficial: nome em texto -->
+      <a href="#inicio" class="wordmark" style="min-height:0" aria-label="Dárquia Moreira, voltar ao início">
+        <b>Dárquia Moreira</b><span>Psicóloga Clínica, CRP 06/130418</span>
+      </a>
+      <p class="muted mt-4 max-w-[34ch]">Terapia Cognitivo-Comportamental, online e presencial.</p>
+      <div class="mt-5 flex items-center gap-3">
+        <!-- EDITÁVEL: redes sociais -->
+        <a class="social" href="https://www.instagram.com/psicologadarquia/" target="_blank" rel="noopener" aria-label="Instagram de Dárquia Moreira"><svg class="ic" aria-hidden="true"><use href="#i-instagram-logo"/></svg></a>
+        <a class="social" href="https://www.google.com/search?q=Psic%C3%B3loga+D%C3%A1rquia+Moreira+Mau%C3%A1" target="_blank" rel="noopener" aria-label="Perfil no Google de Dárquia Moreira"><svg class="ic" aria-hidden="true"><use href="#i-google-logo"/></svg></a>
+        <a href="https://www.doctoralia.com.br/darquia-moreira/psicologo/sao-paulo" target="_blank" rel="noopener">Doctoralia</a>
+      </div>
+    </div>
+
+    <nav class="md:col-span-3" aria-label="Links rápidos">
+      <h2 class="font-display text-[1.0625rem] font-semibold">Navegação</h2>
+      <ul class="mt-3 grid">
+        <li><a href="#atendimento">Atendimento</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="md:col-span-4">
+      <h2 class="font-display text-[1.0625rem] font-semibold">Contato</h2>
+      <ul class="mt-3 grid">
+        <li><a data-gc-event="cta-footer"
+               href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar."
+               target="_blank" rel="noopener"><svg class="ic mr-2" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>(11) 98593-9585</a></li>
+        <!-- EDITÁVEL: e-mail (exibido no site atual da profissional) -->
+        <li><a href="mailto:darquiamarlem@gmail.com"><svg class="ic mr-2" aria-hidden="true"><use href="#i-envelope-simple"/></svg>darquiamarlem@gmail.com</a></li>
+        <li class="muted mt-2 text-[.9375rem] leading-snug">R. Campos Sales, 167, Vila Bocaina, Mauá</li>
+        <li class="muted text-[.9375rem] leading-snug">Av. Radial Leste, 2126, Mooca, São Paulo</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 border-t border-[var(--line)] pt-6 text-center text-[.9375rem] muted">
+    <p>© 2026 Dárquia Moreira - Todos os direitos reservados.</p>
+    <p class="mt-2">Site desenvolvido por <a href="https://teocode.com.br/" target="_blank" rel="noopener" style="min-height:0;text-decoration:underline;text-decoration-color:var(--accent)">TeoCode</a> · © 2026 TeoCode</p>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante (visível no mobile e tablet) -->
+<a class="fab" data-gc-event="cta-flutuante" aria-label="Falar com a Dárquia no WhatsApp"
+   href="https://wa.me/5511985939585?text=Ol%C3%A1%2C%20D%C3%A1rquia!%20Vi%20o%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+   target="_blank" rel="noopener">
+  <svg class="ic" aria-hidden="true"><use href="#i-whatsapp-logo"/></svg>
+</a>
+
+<script>
+(function () {
+  // 1) Rastreio dos cliques nos CTAs (GoatCounter). O link do WhatsApp funciona mesmo se o rastreio falhar (adblock).
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('[data-gc-event]');
+    if (!el) return;
+    var nome = el.getAttribute('data-gc-event');
+    if (window.goatcounter && window.goatcounter.count) {
+      try { window.goatcounter.count({ path: nome, title: nome, event: true }); } catch (err) {}
+    }
+  });
+
+  // 2) Menu móvel
+  var btn = document.getElementById('menu-btn'), panel = document.getElementById('menu-panel');
+  var icOpen = document.getElementById('ic-open'), icClose = document.getElementById('ic-close');
+  function setMenu(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    panel.hidden = !open;
+    icOpen.style.display = open ? 'none' : '';
+    icClose.style.display = open ? '' : 'none';
+  }
+  btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+  panel.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { setMenu(false); btn.focus(); } });
+
+  // 3) Revelação ao rolar (IntersectionObserver, sem listener de scroll). Sem JS ou sem suporte, tudo fica visível.
+  var items = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  // 4) Linha sutil sob a navegação depois que a página sai do topo (sentinela, sem scroll listener)
+  var nav = document.getElementById('topo');
+  if ('IntersectionObserver' in window) {
+    var s = document.createElement('div');
+    s.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:8px;pointer-events:none';
+    document.body.prepend(s);
+    new IntersectionObserver(function (en) { nav.classList.toggle('is-stuck', !en[0].isIntersecting); }).observe(s);
+  }
+})();
+</script>
+</body>
+</html>
